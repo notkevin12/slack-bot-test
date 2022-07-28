@@ -22,28 +22,18 @@ app.message('give cofy', async ({ message, say }) => {
               "text": "order cofy"
             },
             "action_id": "button_click"
-          },
-          "accessory": {
-            "type": "button",
-            "text": {
-              "type": "plain_text",
-              "text": "cofy stats"
-            },
-            "action_id": "button_click"
-          },
-          "accessory": {
-            "type": "button",
-            "text": {
-              "type": "plain_text",
-              "text": "cofy recommendation"
-            },
-            "action_id": "button_click"
           }
         }
       ],
       text: `Hey there <@${message.user}>!`
     });
   });
+
+app.action('button_click', async ({ body, ack, say }) => {
+    // Acknowledge the action
+    await ack();
+    await say(`<@${body.user.id}> clicked the button, what a friggin idiot`);
+});
 
 (async () => {
   // Start your app
