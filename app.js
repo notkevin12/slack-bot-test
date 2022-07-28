@@ -22,6 +22,22 @@ app.message('give cofy', async ({ message, say }) => {
               "text": "order cofy"
             },
             "action_id": "button_click"
+          },
+          "accessory": {
+            "type": "button",
+            "text": {
+              "type": "plain_text",
+              "text": "cofy stats"
+            },
+            "action_id": "button_click"
+          },
+          "accessory": {
+            "type": "button",
+            "text": {
+              "type": "plain_text",
+              "text": "cofy recommendation"
+            },
+            "action_id": "button_click"
           }
         }
       ],
