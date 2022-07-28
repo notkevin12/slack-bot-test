@@ -19,7 +19,7 @@ app.message('hello', async ({ message, say }) => {
             "type": "button",
             "text": {
               "type": "plain_text",
-              "text": "llama-yo"
+              "text": "order cofy"
             },
             "action_id": "button_click"
           }
